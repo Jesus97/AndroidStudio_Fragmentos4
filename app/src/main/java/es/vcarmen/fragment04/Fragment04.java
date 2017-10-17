@@ -26,4 +26,8 @@ public class Fragment04 extends AppCompatActivity {
     public void positivo() {
         Toast.makeText(this,"PULSADO",Toast.LENGTH_SHORT).show();
     }
+
+    public void negativo() {
+        Toast.makeText(this,"NO PULSADO",Toast.LENGTH_SHORT).show();
+    }
 }

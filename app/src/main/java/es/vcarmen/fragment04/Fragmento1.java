@@ -23,7 +23,12 @@ public class Fragmento1 extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         String titulo = getArguments().getString("titulo");
-        return new AlertDialog.Builder(getActivity()).setTitle(titulo).setIcon(R.mipmap.ic_launcher).setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+        return new AlertDialog.Builder(getActivity()).setTitle(titulo).setIcon(R.mipmap.ic_launcher).setNegativeButton("Rechazar", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int wich){
+                ((Fragment04)getActivity()).negativo();
+            }
+        }).setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ((Fragment04)getActivity()).positivo();
