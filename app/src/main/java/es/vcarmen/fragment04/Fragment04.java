@@ -19,15 +19,16 @@ public class Fragment04 extends AppCompatActivity {
             public void onClick(View view) {
                 Fragmento1 fragmentoDialogo = Fragmento1.nuevaInstancia("Dialogo Fragment");
                 fragmentoDialogo.show(getSupportFragmentManager(),"dialogo");
+
             }
         });
     }
 
     public void positivo() {
-        Toast.makeText(this,"PULSADO",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"ACEPTADO",Toast.LENGTH_SHORT).show();
     }
 
     public void negativo() {
-        Toast.makeText(this,"NO PULSADO",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"RECHAZADO",Toast.LENGTH_SHORT).show();
     }
 }
